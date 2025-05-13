@@ -79,7 +79,7 @@ const Hero = () => {
 		setLoadedVideos(prev => prev + 1)
 	}
 
-	const getVideoSource = (index: number) => `videos/hero-${index}.mp4`
+	const getVideoSource = index => `videos/hero-${index}.mp4`
 
 	return (
 		<div className='relative h-dvh w-screen overflow-x-hidden'>
@@ -102,7 +102,7 @@ const Hero = () => {
 							loop
 							muted
 							id='current-video'
-							className='scale-50 ease-in hover:scale-100 hover:opacity-100 duration-200 transition-all opacity-0 size-64 origin-center scale-150 object-cover object-center'
+							className='scale-50 ease-in hover:scale-100 hover:opacity-100 duration-200 transition-all opacity-0 size-64 origin-center object-cover object-center'
 							ref={nextVideoRef}
 							src={getVideoSource(upcomingVideoIndex)}
 							onLoadedData={handleVideoLoad}

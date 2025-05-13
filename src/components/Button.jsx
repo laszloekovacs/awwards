@@ -1,11 +1,6 @@
 import React from 'react'
 
-function Button(props: {
-	title: any
-	id: any
-	leftIcon: any
-	containerClass: any
-}) {
+function Button(props) {
 	const { title, id, leftIcon, containerClass } = props
 
 	return (
